@@ -19,7 +19,8 @@ const Question = ({
   onAnswerSelect,
 }: QuestionProps) => {
   const answers = useMemo(
-    () => [questionData?.correct_answer, ...questionData?.incorrect_answers],
+    () =>
+      [questionData?.correct_answer, ...questionData?.incorrect_answers].sort(),
     [questionData]
   );
 
