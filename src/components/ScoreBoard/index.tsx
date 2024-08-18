@@ -13,9 +13,9 @@ const ScoreBoard = ({ score, totalQuestions }: ScoreBoardProps) => {
           Your final score is {score} out of {totalQuestions}
         </h2>
         <p>Total Questions: {totalQuestions}</p>
-        <p>Correct Answers: {score}</p>
-        <p>Incorrect Answers: {totalQuestions - score}</p>
-        <button onClick={() =>window?.location?.reload() }>
+        <p className="score-board-correct">Correct Answers: {score}</p>
+        <p className="score-board-incorrect">Incorrect Answers: {totalQuestions - score}</p>
+        <button className="refresh-button" onClick={() =>window?.location?.reload() }>
           Refresh
         </button>
       </div>
